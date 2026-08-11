@@ -1,0 +1,16 @@
+# The chart palette was validated against the light chart surface #fcfcfb.
+# Pinning the theme here keeps the surface the palette was checked against the
+# surface that actually renders, so the contrast results stay meaningful.
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#f9f9f7"
+secondaryBackgroundColor = "#fcfcfb"
+textColor = "#0b0b0b"
+font = "sans serif"
+
+[server]
+maxUploadSize = 50
+
+[browser]
+gatherUsageStats = false
