@@ -1,0 +1,150 @@
+{
+  "label_rule": {
+    "rule": "High if Error_Rate_% <= 2 and Speed > 400; Medium if Error_Rate_% <= 5 and Speed > 200; else Low",
+    "accuracy": 0.99998,
+    "n_mismatch": 2,
+    "tree_depth4_insample_acc": 0.99998
+  },
+  "integrity": {
+    "rows": 100000,
+    "cols": 14,
+    "start": "2025-01-01 00:00:00",
+    "end": "2025-03-10 10:39:00",
+    "n_days": 69,
+    "machines": 50,
+    "missing_cells": 0,
+    "full_row_duplicates": 0,
+    "duplicate_ts_machine_pairs": 28,
+    "days_not_1440_rows": {
+      "2025-03-01": 2880,
+      "2025-03-10": 640
+    }
+  },
+  "power": {
+    "min_detectable_r_at_80pct": 0.00886,
+    "min_detectable_r_at_95pct": 0.0114,
+    "observed_network_outcome_r": {
+      "Network_Latency_ms~Production_Speed_units_per_hr": -0.00105,
+      "Network_Latency_ms~Error_Rate_%": 0.0001,
+      "Network_Latency_ms~Quality_Control_Defect_Rate_%": -0.00436,
+      "Packet_Loss_%~Production_Speed_units_per_hr": -0.00712,
+      "Packet_Loss_%~Error_Rate_%": -0.00241,
+      "Packet_Loss_%~Quality_Control_Defect_Rate_%": -0.0049
+    }
+  },
+  "latency_sensitivity": {
+    "Production_Speed_units_per_hr": {
+      "slope_per_ms": -0.009671,
+      "ci95": [
+        -0.066775,
+        0.047434
+      ],
+      "p": 0.7399,
+      "r2_pct": 0.00011,
+      "effect_across_full_latency_span": -0.4739
+    },
+    "Error_Rate_%": {
+      "slope_per_ms": 3e-05,
+      "ci95": [
+        -0.001873,
+        0.001933
+      ],
+      "p": 0.9753,
+      "r2_pct": 0.0,
+      "effect_across_full_latency_span": 0.0015
+    },
+    "Quality_Control_Defect_Rate_%": {
+      "slope_per_ms": -0.00089,
+      "ci95": [
+        -0.002155,
+        0.000376
+      ],
+      "p": 0.1684,
+      "r2_pct": 0.0019,
+      "effect_across_full_latency_span": -0.0436
+    }
+  },
+  "packet_loss_impact_ratio": {
+    "Production_Speed_units_per_hr": {
+      "best_decile": 278.099,
+      "worst_decile": 273.81,
+      "ratio": 0.9846,
+      "p": 0.0193
+    },
+    "Error_Rate_%": {
+      "best_decile": 7.514,
+      "worst_decile": 7.504,
+      "ratio": 0.9986,
+      "p": 0.8613
+    },
+    "Quality_Control_Defect_Rate_%": {
+      "best_decile": 5.021,
+      "worst_decile": 5.014,
+      "ratio": 0.9985,
+      "p": 0.8556
+    },
+    "pct_low_efficiency": {
+      "best_decile": 77.226,
+      "worst_decile": 77.759,
+      "ratio": 1.0069
+    }
+  },
+  "breakpoint_scan": {
+    "max_abs_delta_pp": 0.28,
+    "any_significant": false
+  },
+  "operation_mode": {
+    "max_abs_r": 0.01357,
+    "n_significant": 2,
+    "n_tests": 18,
+    "expected_false_positives": 0.9
+  },
+  "uniformity": {
+    "Temperature_C": 0.8248,
+    "Vibration_Hz": 0.8617,
+    "Power_Consumption_kW": 0.7622,
+    "Network_Latency_ms": 0.3061,
+    "Packet_Loss_%": 0.1627,
+    "Quality_Control_Defect_Rate_%": 0.4683,
+    "Production_Speed_units_per_hr": 0.0216,
+    "Predictive_Maintenance_Score": 0.3903,
+    "Error_Rate_%": 0.7873
+  },
+  "machine_variation": {
+    "pct_low_min": 76.0914,
+    "pct_low_max": 80.427,
+    "pct_low_sd": 0.984
+  },
+  "class_balance": {
+    "Low": 77825,
+    "Medium": 19189,
+    "High": 2986
+  },
+  "mode_balance": {
+    "Active": 70054,
+    "Idle": 20057,
+    "Maintenance": 9889
+  },
+  "eta_squared_vs_efficiency": {
+    "Temperature_C": 0.00149,
+    "Vibration_Hz": 3e-05,
+    "Power_Consumption_kW": 0.00132,
+    "Network_Latency_ms": 0.00076,
+    "Packet_Loss_%": 0.00211,
+    "Quality_Control_Defect_Rate_%": 0.00368,
+    "Production_Speed_units_per_hr": 11.27658,
+    "Predictive_Maintenance_Score": 0.00121,
+    "Error_Rate_%": 38.35798
+  },
+  "model_benchmarks": {
+    "majority_baseline_acc": 0.7782,
+    "all_features_acc": 0.9984,
+    "all_features_balanced_acc": 0.9941,
+    "two_driver_acc": 0.9983,
+    "two_driver_balanced_acc": 0.9931,
+    "network_only_acc": 0.7782,
+    "network_only_balanced_acc": 0.3333,
+    "shuffled_target_acc": 0.7782,
+    "shuffled_target_balanced_acc": 0.3333
+  }
+}
